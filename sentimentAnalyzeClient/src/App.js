@@ -43,6 +43,8 @@ class App extends React.Component {
     let mode = this.state.mode
     url = url+"/" + mode + "/sentiment?"+ mode + "="+document.getElementById("textinput").value;
 
+    
+
     fetch(url).then((response)=>{
         response.json().then((data)=>{
         this.setState({sentimentOutput:data.label});
